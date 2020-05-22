@@ -1,22 +1,29 @@
 import React from "react";
 import styled from "styled-components";
 import { ResetCss } from "./styles/reset";
-import billy from "./assets/img/rebeu.png";
-import { Header } from "./components/organisms/header";
+import { Navbar } from "./components/molecules/navbar";
+import PropTypes from "prop-types";
 
 const AppWrapper = styled.div`
-  display: grid;
+  display: flex;
   font-family: "Roboto";
-  grid-template: 100%;
-  grid-column-gap: 40px;
-  margin: 0 20px;
 `;
 
 export default function App() {
   return (
     <AppWrapper>
       <ResetCss />
-      <Header person={billy} icons={["notification", "message", "search"]} />
+      <Navbar
+        navbarContents={[
+          { active: true, name: "Categories" },
+          { active: false, name: "Chaines live" },
+        ]}
+      />
     </AppWrapper>
   );
 }
+
+export const NavbarContentsType = PropTypes.shape({
+  active: PropTypes.bool,
+  name: PropTypes.string,
+});
