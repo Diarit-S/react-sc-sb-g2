@@ -8,6 +8,7 @@ const AppWrapper = styled.div`
   font-family: "Roboto";
   grid-template: 100%;
   grid-column-gap: 40px;
+  margin: 0 20px;
 `;
 
 export default function App() {

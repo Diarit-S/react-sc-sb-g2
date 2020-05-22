@@ -7,8 +7,7 @@ const HeaderWrapper = styled.header`
   display: grid;
   height: 50px;
   align-items: center;
-  justify-content: center;
-  grid-template-columns: 1.5fr 50% 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 40% 1fr 1fr 1fr;
   margin: 20px 0px 20px 0px;
 `;
 
