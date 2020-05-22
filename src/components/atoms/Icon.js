@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+import stylePropType from "react-style-proptype";
 
 export const Icon = ({ icon, size, style }) => {
   return icon === "notification" ? (
@@ -46,4 +48,10 @@ export const Icon = ({ icon, size, style }) => {
   ) : (
     <></>
   );
+};
+
+Icon.propTypes = {
+  icon: PropTypes.string,
+  size: PropTypes.string,
+  style: stylePropType,
 };
