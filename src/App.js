@@ -1,11 +1,20 @@
 import React from "react";
-import Badge, { colors } from "./ui/atoms/Badge";
+import styled from "styled-components";
+import { ResetCss } from "./styles/reset";
+import { Header } from "./components/organisms/header";
+
+const AppWrapper = styled.div`
+  display: grid;
+  font-family: "Roboto";
+  grid-template: 100%;
+  grid-column-gap: 40px;
+`;
 
 export default function App() {
-      return (
-            <div className="App">
-                <Badge text="IRL" color={colors.purple}/>
-                <Badge text="IRL" color={colors.grey}/>
-            </div>
-      );
+  return (
+    <AppWrapper>
+      <ResetCss />
+      <Header />
+    </AppWrapper>
+  );
 }
