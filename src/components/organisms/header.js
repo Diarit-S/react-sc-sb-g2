@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import rebeu from "../../assets/img/rebeu.png";
+import billy from "../../assets/img/rebeu.png";
 import { Icon } from "../atoms/Icon";
+import { Profile } from "../atoms/Profile";
 
 const HeaderWrapper = styled.header`
   display: grid;
@@ -11,17 +12,10 @@ const HeaderWrapper = styled.header`
   margin: 20px 0px 20px 0px;
 `;
 
-const Profile = styled.img`
-  height: 40px;
-  width: 40px;
-  background-color: white;
-  border-radius: 50%;
-`;
-
 export const Header = () => {
   return (
     <HeaderWrapper>
-      <Profile src={rebeu} />
+      <Profile person={billy} />
       <Icon icon={"notification"} size={"23"} style={{ gridColumnStart: 3 }} />
       <Icon icon={"message"} size={"23"} />
       <Icon icon={"search"} size={"23"} />
