@@ -17,7 +17,7 @@ const Text = styled.p`
 
 export const Tab = ({ content, index, navActive, onClick }) => {
   return (
-    <TabsWrapper
+    <TabWrapper
       onClick={() => {
         onClick();
       }}
@@ -25,7 +25,7 @@ export const Tab = ({ content, index, navActive, onClick }) => {
       <Text index={index} navActive={navActive} isActive={content.active}>
         {content.name}
       </Text>
-    </TabsWrapper>
+    </TabWrapper>
   );
 };
 
