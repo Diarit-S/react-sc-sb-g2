@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { NavbarContentsType } from "../../App";
 
-const TabsWrapper = styled.div`
+const TabWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
