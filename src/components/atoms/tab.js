@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { NavbarContentsType } from "../../App";
 
 const TabWrapper = styled.div`
   display: flex;
@@ -11,8 +10,10 @@ const TabWrapper = styled.div`
   font-size: 18px;
 `;
 
-const Text = styled.p`
+const Text = styled.span`
+  cursor: pointer;
   color: ${(props) => props.navActive === props.index && "#af85cd"};
+  font-family: 'Roboto';
 `;
 
 export const Tab = ({ content, index, navActive, onClick }) => {
@@ -22,15 +23,15 @@ export const Tab = ({ content, index, navActive, onClick }) => {
         onClick();
       }}
     >
-      <Text index={index} navActive={navActive} isActive={content.active}>
-        {content.name}
+      <Text index={index} navActive={navActive}>
+        {content}
       </Text>
     </TabWrapper>
   );
 };
 
-Tabs.propTypes = {
-  navbarContents: NavbarContentsType,
+Tab.propTypes = {
+  content: PropTypes.string,
   index: PropTypes.number,
   navActive: PropTypes.number,
   onClick: PropTypes.func,
