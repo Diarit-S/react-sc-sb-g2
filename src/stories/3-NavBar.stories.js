@@ -27,7 +27,7 @@ export const NavBar = () => <Navbar navbarContents={[
 
 ]}/>;
 
-export const ActiveTab = () => <Tab content={text("Text", "Active")} navActive={1} index={1}/>;
+export const ActiveTab = () => <Tab content={text("Text", "Im a nav item")} navActive={1} index={1}/>;
 
-export const InactiveTab = () => <Tab content={text("Text", "Inactive")} navActive={1} index={2}/>;
+export const InactiveTab = () => <Tab content={text("Text", "Im a nav item")} navActive={1} index={2}/>;
 
