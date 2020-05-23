@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Tabs } from "../atoms/tabs";
+import { Tab } from "../atoms/tab";
 import { NavbarContentsType } from "../../App";
 import PropTypes from "prop-types";
 
@@ -26,7 +26,7 @@ export const Navbar = ({ navbarContents }) => {
     <NavWrapper length={navbarContents.length}>
       {navbarContents.map((content, i) => {
         return (
-          <Tabs
+          <Tab
             key={i}
             content={content}
             index={i}

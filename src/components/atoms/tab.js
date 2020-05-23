@@ -15,7 +15,7 @@ const Text = styled.p`
   color: ${(props) => props.navActive === props.index && "#af85cd"};
 `;
 
-export const Tabs = ({ content, index, navActive, onClick }) => {
+export const Tab = ({ content, index, navActive, onClick }) => {
   return (
     <TabsWrapper
       onClick={() => {
