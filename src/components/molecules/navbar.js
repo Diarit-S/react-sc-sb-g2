@@ -21,7 +21,10 @@ const Underline = styled.div`
 
 
 /**
- * The `Navbar` molecule regroup nav items. An array of contents is expected as prop to display navigation
+ * The `Navbar` molecule regroup nav items. An array of strings is expected as prop to display navigation.
+ * For the cours, we pass simply an array of string, but in normally dev environment we would pass certains project routes.
+ * 
+ * Also, we have in some way hard code the activation of the item (syles changes on click), also cause we don't have routes...
  */
 export const Navbar = ({ navbarContents }) => {
   const [navActive, setNavActive] = useState(0);
